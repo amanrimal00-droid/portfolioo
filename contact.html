@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Aman Rimal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GSAP -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav glass">
+  <div class="logo">Aman<span>.</span></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero glass soft-bg">
+  <div class="hero-content">
+    <h1>Let's Work Together</h1>
+    <p>Have a project or idea? I’d love to collaborate with you. Fill the form below or check my contact info.</p>
+  </div>
+</section>
+
+<!-- ================= CONTACT FORM ================= -->
+<section class="section soft-bg" id="contact">
+  <h2 class="section-title">Get in Touch</h2>
+  <form class="contact-form glass">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn neon-btn">Send Message</button>
+  </form>
+
+  <!-- JS will populate email & WhatsApp -->
+  <div id="contact-info" class="social-icons"></div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  © 2025 Aman Rimal
+</footer>
+
+<!-- JS -->
+<script src="script.js"></script>
+<script>
+  // =====================
+  // DISPLAY EMAIL AND WHATSAPP DYNAMICALLY
+  // =====================
+  const contactInfo = document.getElementById("contact-info");
+
+  if (contactInfo) {
+    contactInfo.innerHTML = `
+      <p class="neon-icon">Email: amanrimal00@gmail.com</p>
+      <p class="neon-icon">WhatsApp: 9841476975</p>
+    `;
+  }
+</script>
+</body>
+</html>
